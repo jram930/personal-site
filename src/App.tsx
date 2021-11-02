@@ -1,4 +1,5 @@
 import Home from "./Home"
+import Photos from "./Photos"
 
 import {
 	BrowserRouter as Router,
@@ -12,6 +13,7 @@ export default function App() {
 			<div style={{ height: '100%' }}>
 				<Switch>
 					<Route exact path="/" component={Home}/>
+					<Route exact path="/photos" component={Photos}/>
 					{/* <Route component={PageNotFound}/> */}
 				</Switch>
 			</div>
