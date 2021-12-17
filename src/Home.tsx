@@ -50,7 +50,10 @@ const theme = createTheme({
 
 const appStyle = {
 	height: '100%',
+  width: '100%',
+  paddingRight: '50px',
 	backgroundColor: '#333333',
+  overflowY: 'hidden' as 'hidden'
 }
 
 const backgroundStyle = {
@@ -88,6 +91,7 @@ const aboutMeStyle = {
 	position: 'relative' as 'relative',
 	backgroundColor: '#222222',
 	marginLeft: 500,
+  marginRight: 500,
 	marginTop: 100,
 	paddingBottom: 30
 }
@@ -127,7 +131,7 @@ function Home() {
 					<div><Button style={buttonStyle} variant="contained" target="_blank" href="https://github.com/jram930"><FontAwesomeIcon style={iconStyle} icon={faCodeBranch} />Github</Button></div>
 					<div><Button style={buttonStyle} variant="contained" target="_blank" href="https://www.linkedin.com/in/jaredramsey/"><FontAwesomeIcon style={iconStyle} icon={faBriefcase} />LinkedIn</Button></div>
 					<div><Button style={buttonStyle} variant="contained" target="_blank" href="Resume.pdf"><FontAwesomeIcon style={iconStyle} icon={faFile} />Resume</Button></div>
-					{/* <div><Button style={buttonStyle} variant="contained" target="_blank" href=""><FontAwesomeIcon style={iconStyle} icon={faCamera} />Photos</Button></div> */}
+					<div><Button style={buttonStyle} variant="contained" target="_self" href="/photos"><FontAwesomeIcon style={iconStyle} icon={faCamera} />Photos</Button></div>
 					{/* <div><Button style={buttonStyle} variant="contained" target="_blank" href=""><FontAwesomeIcon style={iconStyle} icon={faCode} />Playground</Button></div> */}
 				</div>
 

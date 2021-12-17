@@ -48,24 +48,6 @@ const theme = createTheme({
 	},
 });
 
-const appStyle = {
-	height: '100%',
-	backgroundColor: '#333333',
-	margin: 0
-}
-
-const backgroundStyle = {
-	backgroundImage: `url(${backgroundImage})`,
-	backgroundPosition: 'center',
-	backgroundSize: 'cover',
-	backgroundRepeat: 'no-repeat',
-	height: '100%',
-	width: '100%',
-	position: 'absolute' as 'absolute',
-	top: 0,
-	left: 0,
-}
-
 const headerStyle = {
 	margin: 0,
 	marginLeft: 100,
@@ -74,14 +56,34 @@ const headerStyle = {
 	paddingTop: 50
 }
 
+const imgContainer = {
+  position: 'absolute' as 'absolute',
+  paddingLeft: '50px',
+  paddingRight: '50px',
+  width: '100%',
+  height: '100%'
+}
+
+const imgStyle ={
+  width: '700px',
+  position: 'relative' as 'relative',
+  margin: '50px'
+}
+
 function Photos() {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<div className="Photos" style={appStyle}>
-				<div style={backgroundStyle}>
-				</div>
+			<div className="Photos">
 				<h1 style={headerStyle}>Photos</h1>
+        <div style={imgContainer}>
+          <img style={imgStyle} src='/jellyfish.jpg' alt='Jellyfish'/>
+          <img style={imgStyle} src='/whaleshark.jpg' alt='Whaleshark'/>
+          <img style={imgStyle} src='/tiger.jpg' alt='Tiger'/>
+          <img style={imgStyle} src='/turtle.jpg' alt='Turtle'/>
+          <img style={imgStyle} src='/elephant.jpg' alt='Elephant'/>
+          <img style={imgStyle} src='/zooDecor.jpg' alt='Zoo Decorations'/>
+        </div>
 			</div>
 		</ThemeProvider>
 	);
